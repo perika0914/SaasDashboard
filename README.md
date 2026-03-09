@@ -4,6 +4,9 @@ SaaS Campaign Dashboard.
 A React + TypeScript SaaS Campaign Management Dashboard that allows users to view, manage, and monitor marketing campaigns.
 The application provides campaign listing, filtering, campaign details, and performance analytics with a clean dashboard UI.
 
+## Live Demo :
+Deployed Application: https://saas-dashboard-beige.vercel.app/
+
 Project Overview.
 
 
