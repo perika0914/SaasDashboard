@@ -1,8 +1,12 @@
 SaaS Campaign Dashboard.
+
+
 A React + TypeScript SaaS Campaign Management Dashboard that allows users to view, manage, and monitor marketing campaigns.
 The application provides campaign listing, filtering, campaign details, and performance analytics with a clean dashboard UI.
 
 Project Overview.
+
+
 This project demonstrates a modular frontend architecture using modern React practices including:
 •	Feature-based folder structure
 •	Custom hooks
@@ -19,6 +23,8 @@ The dashboard enables users to:
 •	Track campaign performance
 
 Tech Stack
+
+
 Technology	Purpose
 React	UI framework
 TypeScript (TSX)	Type safety and maintainable code
@@ -36,6 +42,7 @@ Features:
 •  Run campaign button
 
 Folder Structure:
+
 
 src
  ├── app
