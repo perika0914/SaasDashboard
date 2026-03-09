@@ -117,7 +117,7 @@ src
 
  Installation Steps :
  # Clone repository
-git clone https://github.com/your-username/saas-dashboard
+git clone: https://github.com/your-username/saas-dashboard
 
 # Install dependencies
 npm install
