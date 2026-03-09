@@ -34,12 +34,29 @@ React Router DOM	Routing between pages
 Recharts	Data visualization for performance
 Lodash.debounce	Optimized search input handling
 
+
 Features:
 •  Campaign search
 •  Status filter (Active / Completed)
 •  Budget display
 •  Job status
 •  Run campaign button
+
+Architecture :
+
+UI Components
+      ↓
+Custom Hooks
+      ↓
+Service Layer
+      ↓
+Mock Data
+
+Explanation: 
+Components handle UI rendering
+Hooks manage state and logic
+Services simulate API calls
+Mocks act as fake database
 
 Folder Structure:
 
@@ -83,3 +100,28 @@ src
  ├── main.tsx
  ├── App.css
  └── index.css
+ 
+
+ Job Simulation :
+ Pending → Processing → Completed / Failed
+
+ UX Handling :
+ • Loading states while data is fetched
+• Error states when simulated APIs fail
+• Empty states when no campaigns match filters
+
+
+
+ Installation Steps :
+ # Clone repository
+git clone https://github.com/your-username/saas-dashboard
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+
+
+ 
