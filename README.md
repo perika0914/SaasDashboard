@@ -1,73 +1,78 @@
-# React + TypeScript + Vite
+SaaS Campaign Dashboard.
+A React + TypeScript SaaS Campaign Management Dashboard that allows users to view, manage, and monitor marketing campaigns.
+The application provides campaign listing, filtering, campaign details, and performance analytics with a clean dashboard UI.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Project Overview.
+This project demonstrates a modular frontend architecture using modern React practices including:
+•	Feature-based folder structure
+•	Custom hooks
+•	Service layer for API handling
+•	Mock API simulation
+•	Debounced search filtering
+•	Campaign performance visualization
+The dashboard enables users to:
+•	View all campaigns
+•	Filter campaigns by status
+•	Search campaigns
+•	View campaign details
+•	Run campaign jobs
+•	Track campaign performance
 
-Currently, two official plugins are available:
+Tech Stack
+Technology	Purpose
+React	UI framework
+TypeScript (TSX)	Type safety and maintainable code
+Vite	Fast development server
+Tailwind CSS	UI styling
+React Router DOM	Routing between pages
+Recharts	Data visualization for performance
+Lodash.debounce	Optimized search input handling
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Features:
+•  Campaign search
+•  Status filter (Active / Completed)
+•  Budget display
+•  Job status
+•  Run campaign button
 
-## React Compiler
+Folder Structure:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+src
+ ├── app
+ │
+ ├── components
+ │   ├── layout
+ │   │    ├── Sidebar.tsx
+ │   │    └── Navbar.tsx
+ │   └── ui
+ │
+ ├── features
+ │   ├── campaigns
+ │   │   ├── components
+ │   │   ├── hooks
+ │   │   │   └── useCampaigns.ts
+ │   │   ├── mocks
+ │   │   │   └── campaignMockData.ts
+ │   │   ├── pages
+ │   │   │   ├── CampaignListPage.tsx
+ │   │   │   └── CampaignDetailPage.tsx
+ │   │   ├── services
+ │   │   │   ├── campaignService.ts
+ │   │   │   └── jobService.ts
+ │   │   └── types
+ │   │       └── campaignTypes.ts
+ │
+ │   ├── jobs
+ │   │   ├── hooks
+ │   │   │   └── useJobPolling.ts
+ │   │   └── services
+ │   │       └── jobService.ts
+ │
+ ├── services
+ │   └── api
+ │        └── fakeApi.ts
+ │
+ ├── App.tsx
+ ├── main.tsx
+ ├── App.css
+ └── index.css
